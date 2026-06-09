@@ -73,8 +73,6 @@ This measures the degree of specialization of a player across court types.
 
 ---
 
-## Additional Features
-
 ### Overall Elo Difference
 
 Difference between two players' overall Elo ratings.
@@ -174,6 +172,18 @@ The project includes:
 
 <img width="678" height="404" alt="Screenshot 2026-06-09 at 14 48 16" src="https://github.com/user-attachments/assets/42bdbb53-52d2-433d-8c6a-02be60c94e7e" />
 
+
+---
+## Key Results
+
+- Processed 65,000+ training observations from ATP match history
+- Built a dynamic Elo rating system that updates chronologically after every match
+- Created separate Elo systems for hard, clay, and grass courts
+- Engineered form-based and head-to-head features
+- Tested Logistic Regression, Random Forest, and XGBoost
+- Best model: Logistic Regression
+- Test Accuracy: 69.4%
+- Test AUC: 0.756
 
 ---
 
