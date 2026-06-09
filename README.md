@@ -14,7 +14,6 @@ The project was built using ATP match data from 2018–2025 and combines traditi
 * Track player performance chronologically across multiple seasons.
 * Create separate Elo systems for Hard, Clay, and Grass courts.
 * Identify player surface specializations.
-* Compare Elo-based rankings against official ATP rankings.
 * Develop machine learning models capable of predicting future match outcomes.
 
 ---
@@ -32,7 +31,7 @@ Key information includes:
 * ATP rankings
 * Match outcomes
 
-More than 65,000 training observations were generated through feature engineering and chronological processing of match history.
+More than 65,000 training observations were generated through chronological processing of match history.
 
 ---
 
