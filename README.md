@@ -1,9 +1,80 @@
+# Dynamic Elo Tennis Model
+
+A machine learning and sports analytics project that predicts ATP tennis match outcomes using dynamic Elo ratings, surface-specific player metrics, recent form, and head-to-head records.
+
+---
+
+## Overview
+
+**Dynamic Elo Tennis Model** analyzes ATP tennis matches using dynamic Elo rating systems, surface-specific player ratings, recent form metrics, and head-to-head records to predict match outcomes.
+
+Built using ATP match data from 2018–2025, the project combines traditional rating systems with modern machine learning techniques to forecast results and evaluate player performance across different court surfaces.
+
+---
+
+## Objectives
+
+- Build a dynamic Elo rating system for ATP players
+- Track player performance chronologically across multiple seasons
+- Create separate Elo systems for Hard, Clay, and Grass courts
+- Identify player surface specializations
+- Develop machine learning models capable of predicting future match outcomes
+
+---
+
+## Dataset
+
+Historical ATP match data from **2018–2025**.
+
+Key information includes:
+
+| Field | Description |
+| :--- | :--- |
+| `tourney_date` | Match date |
+| `tourney_level` | Tournament level |
+| `surface` | Court surface |
+| `winner_id` / `loser_id` | Player IDs |
+| `winner_rank` / `loser_rank` | ATP rankings |
+| `match_outcome` | Match result |
+
+**65,000+ training observations** generated through chronological processing of match history.
+
+---
+
+## Dynamic Elo Rating System
+
+Each player begins with a rating of **1500**.
+
+For every completed match:
+
+- Expected win probability is calculated using the Elo formula
+- Ratings are updated based on actual match outcomes
+- Higher-rated players gain fewer points from expected victories
+- Lower-rated players gain larger increases from upset wins
+
+The system tracks player strength over time rather than relying solely on ATP ranking points.
+
+---
+
+## Surface-Specific Elo Ratings
+
+Three independent Elo systems were created:
+
+- **Hard Court Elo**
+- **Clay Court Elo**
+- **Grass Court Elo**
+
+This allows the model to identify court-specific strengths and weaknesses.
+
+**Examples:**
+
+- Carlos Alcaraz demonstrates stronger Clay Court performance
+- Jannik Sinner demonstrates stronger Hard Court performance
+
 
 This measures the degree of specialization of a player across court types.
 
 ---
-
-## Feature Engineering
 
 ### Overall Elo Difference
 
@@ -158,4 +229,5 @@ These factors may improve predictive performance in future versions.
 - Implement time-decay weighting for Elo ratings
 - Deploy as an interactive web app
 - Add player-level dashboards
+
 
